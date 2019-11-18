@@ -28,19 +28,41 @@ get_header(); ?>
 			?>
 			<div class="journal">
                 <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-   				    <?php /* Content from your array of post results goes here */ ?>
+   				    <?php ?>
 					   <ul class="journal-container">
 					   		<div class="journal-img">
 							<?php the_post_thumbnail(); ?></div>
 							<div class="journal-data">
-							<?php echo get_the_date(); ?> / <?php echo get_comments_number(); ?> Comments</div>
+							<?php echo get_the_date(); ?> / <?php echo get_comments_number(); ?> comments</div>
 							<div class="journal-title">
 						   	<?php the_title(); ?></div>
 							<div class="read-entry-btn">
 							<a href="<?php echo get_post_permalink($post);?>">read entry</a></div>
 						</ul>
         <?php endforeach; wp_reset_postdata(); ?>
-			</div>
-
+            </div>
             
+            <h2 class="ij-title">INHABITENT ADVENTURES</h2>
+			<?php 
+				$args = array( 'post_type' => 'adventure', 'order' => 'DSC', 'posts_per_page' => 4);
+   				$product_posts = get_posts( $args ); 
+			?>
+			<div class="journal">
+                <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
+   				    <?php ?>
+					   <ul class="journal-container">
+					   		<div class="journal-img">
+							<?php the_post_thumbnail(); ?></div>
+							<div class="journal-data">
+							<div class="journal-title">
+						   	<?php the_title(); ?></div>
+							<div class="read-entry-btn">
+							<a href="<?php echo get_post_permalink($post);?>">read entry</a></div>
+						</ul>
+                <?php endforeach; wp_reset_postdata(); ?>
+            </div>
+
          </section>
+                
+
+         <?php

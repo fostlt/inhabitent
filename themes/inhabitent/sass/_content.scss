@@ -118,7 +118,25 @@ a {
 .read-entry-btn {
     background-color: transparent;
     border: 1px solid #000;
+    width: fit-content;
     a{
         color: #000;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: .75rem 1.5rem;
     }
+}
+
+.journal-title {
+    padding: 0px;
+    font-size: 1.3rem;
+    color: #248a83;
+}
+
+.journal-data {
+    font-size: .75rem;
+}
+
+.adventures-title {
+    padding: 0px;
 }

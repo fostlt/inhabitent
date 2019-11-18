@@ -4,46 +4,97 @@
 
 /* Posts and pages */
 
-.sticky {
-	display: block;
+
+/* header */
+h1 {
+    display: none;
 }
 
-.hentry {
-	margin: 0 0 $base__space-unit;
+a {
+    text-decoration: none;
+    color: #fff;
+    padding-right: 25px;
 }
 
-.updated:not(.published){
-	display: none;
+.site-header {
+    padding: 0px;
 }
 
-.single .byline,
-.group-blog .byline {
-	display: inline;
+.custom-logo {
+    height: 33px;
+    width: 50px;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: $base__space-unit 0 0;
+.container-logo-nav {
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
-.page-links {
-	clear: both;
-	margin: 0 0 $base__space-unit;
+
+.container-hero {
+    background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/home-hero.jpg) no-repeat top;
+    height: 100vh;
+    background-size: cover, cover;
 }
 
-/* Asides */
 
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-	display: none;
+.wp-post-image {
+    padding-left: 42%;
+    padding-right: 40%;
+    height: 100vh;
 }
 
-/* Comments */
+.main-navigation {
+    width: 50%;
+    padding-left: 10%;
+    align-items: center;
+    display: flex;
 
-.comment-content a {
-	word-wrap: break-word;
+    a:visited{
+        color: #FFF;
+    }
 }
-.bypostauthor {
-	display: block;
+
+.custom_logo {
+    width:50%;
+}
+
+
+/* SHOP STUFF SECTION*/
+
+.product-info h2 {
+    text-align: center;
+    color: #2f1339;
+    font-size: 2.4rem;
+    margin-bottom: 60px;
+}
+
+
+.product-type-blocks {
+    display: flex;
+    justify-content: space-between; 
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+/* TODO FIX FONT*/
+.product-type-block-wrapper {
+    width: 23%;
+    border: 1px solid #e1e1e1;
+    font-family: 'Merriweather', serif;
+    
+}
+
+.product-type-block-wrapper img {
+    height:70px;
+    width:70px;
+}
+
+.btn {
+    background: #248a83;
+    color: #fff;
+    padding: .75rem 1.5rem;
+    text-transform: uppercase;
 }

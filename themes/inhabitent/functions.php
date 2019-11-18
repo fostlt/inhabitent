@@ -106,3 +106,44 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/** Custom logo */
+
+add_theme_support( 'custom-logo' );
+function inhabitent_theme_custom_logo_setup() {
+	$defaults = array(
+	'height'      => 50,
+	'width'       => 400,
+	'flex-height' => true,
+	'flex-width'  => true,
+	'header-text' => array( 'site-title', 'site-description' ),
+	);
+	add_theme_support( 'custom-logo', $defaults );
+   }
+   add_action( 'after_setup_theme', 'inhabitent_theme_custom_logo_setup' );
+   
+
+/** SVG Allow **/
+// Allow SVG
+add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
+ 
+	global $wp_version;
+	if ( $wp_version !== '4.7.1' ) {
+	   return $data;
+	}
+   
+	$filetype = wp_check_filetype( $filename, $mimes );
+   
+	return [
+		'ext'             => $filetype['ext'],
+		'type'            => $filetype['type'],
+		'proper_filename' => $data['proper_filename']
+	];
+   
+  }, 10, 4 );
+   
+  function cc_mime_types( $mimes ){
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+  }
+  add_filter( 'upload_mimes', 'cc_mime_types' );

@@ -689,6 +689,61 @@ a {
 .adventures-title {
   padding: 0px; }
 
+/* ADVENTURES*/
+.adventure-container {
+  display: grid;
+  height: 500px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%; }
+  .adventure-container:nth-child(1) {
+    grid-row: 1/ span 2;
+    grid-column: 1 / span 2; }
+  .adventure-container:nth-child(2) {
+    grid-column: 2/4; }
+
+.adventure-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: 100%; }
+
+.adventure-box {
+  padding: 0px; }
+
+.adventure-img {
+  padding: 0px; }
+
+.read-entry-btn {
+  background-color: transparent;
+  border: 1px solid #000;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
+  .read-entry-btn a {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .75rem 1.5rem; }
+
+.adventure-title {
+  padding: 0px;
+  font-size: 1.3rem;
+  color: #248a83; }
+
+.adventure-data {
+  font-size: .75rem; }
+
+.adventures-title {
+  padding: 0px; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

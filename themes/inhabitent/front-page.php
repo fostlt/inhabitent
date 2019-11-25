@@ -42,22 +42,24 @@ get_header(); ?>
         <?php endforeach; wp_reset_postdata(); ?>
             </div>
             
-            <h2 class="ij-title">INHABITENT ADVENTURES</h2>
+            <h2 class="ij-title">ADVENTURES</h2>
 			<?php 
-				$args = array( 'post_type' => 'adventure', 'order' => 'DSC', 'posts_per_page' => 4);
+				$args = array( 'post_type' => 'adventure', 'order' => 'ASC', 'posts_per_page' => 4);
    				$product_posts = get_posts( $args ); 
 			?>
-			<div class="journal">
+			<div class="adventure-container">
                 <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
    				    <?php ?>
-					   <ul class="journal-container">
-					   		<div class="journal-img">
-							<?php the_post_thumbnail(); ?></div>
-							<div class="journal-data">
-							<div class="journal-title">
-						   	<?php the_title(); ?></div>
+					   <ul class="adventure-box">
+					   		<div class="adventure-img">
+							<?php the_post_thumbnail('medium'); ?></div>
+							<div class="adventure-data">
+							<div class="adventure-title">
+                               <h3><?php the_title(); ?></h3>
+                        </div>
 							<div class="read-entry-btn">
-							<a href="<?php echo get_post_permalink($post);?>">read entry</a></div>
+                            <a href="<?php echo get_post_permalink($post);?>">read entry</a>
+                        </div>
 						</ul>
                 <?php endforeach; wp_reset_postdata(); ?>
             </div>

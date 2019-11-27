@@ -23,6 +23,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_excerpt(); ?>
+		<?php //the_excerpt(); ?>
+		<?php the_field('price'); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

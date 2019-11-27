@@ -317,10 +317,6 @@ hr {
   height: 1px;
   margin-bottom: 1.5rem; }
 
-ul,
-ol {
-  margin: 0 0 1.5rem 3rem; }
-
 ul {
   list-style: disc; }
 
@@ -582,7 +578,8 @@ a {
   padding-right: 25px; }
 
 .site-header {
-  padding: 0px; }
+  background-color: transparent;
+  height: 0px; }
 
 .custom-logo {
   height: 33px;
@@ -592,14 +589,25 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 15%;
-  margin-right: 15%; }
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px; }
 
-.container-hero {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), #969696 url(../../images/home-hero.jpg) no-repeat top;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4)), #969696 url(../../images/home-hero.jpg) no-repeat top;
+.hero-banner {
   height: 100vh;
-  background-size: cover, cover; }
+  background-size: cover, cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.hero-about {
+  padding: 0px; }
 
 /* TODO  */
 .main-navigation {
@@ -616,6 +624,9 @@ a {
 
 .custom_logo {
   width: 50%; }
+
+.inhabitent-text-logo {
+  position: absolute; }
 
 /* SHOP STUFF SECTION*/
 .product-info h2 {
@@ -636,6 +647,10 @@ a {
   margin-right: auto;
   text-align: center; }
 
+.product-type-blocks p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem; }
+
 /* TODO FIX FONT*/
 .product-type-block-wrapper {
   width: 23%;
@@ -650,7 +665,8 @@ a {
   background: #248a83;
   color: #fff;
   padding: .75rem 1.5rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: .9rem; }
 
 /* JOURNAL */
 .journal {
@@ -661,7 +677,8 @@ a {
 .journal-container {
   width: 25%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-left: 0; }
 
 .journal-img {
   padding: 0px; }
@@ -681,7 +698,8 @@ a {
 .journal-title {
   padding: 0px;
   font-size: 1.3rem;
-  color: #248a83; }
+  color: #248a83;
+  margin-bottom: 2.3rem; }
 
 .journal-data {
   font-size: .75rem; }
@@ -689,23 +707,34 @@ a {
 .adventures-title {
   padding: 0px; }
 
+.journal-wrapper {
+  border: solid 1px #e1e1e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: .75rem; }
+
 /* ADVENTURES*/
 .adventure-container {
-  display: grid;
   height: 500px;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
   margin: 0px;
   padding: 0px;
   overflow: hidden;
   height: 100%;
-  width: 100%; }
-  .adventure-container:nth-child(1) {
-    grid-row: 1/ span 2;
-    grid-column: 1 / span 2; }
-  .adventure-container:nth-child(2) {
-    grid-column: 2/4; }
+  width: 1120px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.adventure-posts-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
 
 .adventure-container img {
   -o-object-fit: cover;
@@ -726,7 +755,8 @@ a {
   border: 1px solid #000;
   width: -webkit-fit-content;
   width: -moz-fit-content;
-  width: fit-content; }
+  width: fit-content;
+  padding: .75rem 1.5rem; }
   .read-entry-btn a {
     color: #000;
     text-decoration: none;
@@ -743,6 +773,142 @@ a {
 
 .adventures-title {
   padding: 0px; }
+
+.about-title {
+  display: initial;
+  color: #FFF;
+  font-size: 3.3rem; }
+
+.entry-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800; }
+  .entry-content p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem; }
+  .entry-content h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #2F1339; }
+
+/* footer */
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FFF;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.footer {
+  background: url(../../images/dark-wood.png); }
+  .footer p {
+    margin-left: 0rem; }
+
+.contact-form {
+  width: 25%; }
+  .contact-form h3 {
+    color: #d99054;
+    font-size: 1.5rem; }
+  .contact-form p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem; }
+
+.contact-hours {
+  width: 25%; }
+  .contact-hours h3 {
+    color: #d99054;
+    font-size: 1.5rem; }
+  .contact-hours p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem; }
+
+.footer-logo {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.footer-logo-size {
+  width: 50%; }
+
+.footer-copyright {
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  text-transform: uppercase; }
+
+/* find us */
+.find-us-nav {
+  border-bottom: 1px solid #e1e1e1;
+  width: initial; }
+
+.entry-content {
+  margin-top: 3rem; }
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 1044px;
+  margin-left: auto;
+  margin-right: auto; }
+  .shop-grid img {
+    height: 250px;
+    max-width: auto; }
+  .shop-grid a {
+    color: #2f1339; }
+
+.entry-content {
+  margin-top: 1rem; }
+
+.first-page-product-choose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .first-page-product-choose div {
+    border: 0px; }
+
+.buttons {
+  color: #248a83; }
+
+.first-page-product-choose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
+  .first-page-product-choose div {
+    width: unset; }
+
+.page-title-archive {
+  text-align: center;
+  font-size: 2.4rem; }
 
 /*--------------------------------------------------------------
 # Media

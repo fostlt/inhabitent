@@ -31,40 +31,51 @@ get_header(); ?>
    				    <?php ?>
 					   <ul class="journal-container">
 					   		<div class="journal-img">
-							<?php the_post_thumbnail(); ?></div>
+                     <?php the_post_thumbnail(); ?></div>
+                     <div class="journal-wrapper">
 							<div class="journal-data">
 							<?php echo get_the_date(); ?> / <?php echo get_comments_number(); ?> comments</div>
 							<div class="journal-title">
 						   	<?php the_title(); ?></div>
 							<div class="read-entry-btn">
-							<a href="<?php echo get_post_permalink($post);?>">read entry</a></div>
+                     <a href="<?php echo get_post_permalink($post);?>">read entry</a></div>
+                  </div>
 						</ul>
         <?php endforeach; wp_reset_postdata(); ?>
             </div>
             
-            <h2 class="ij-title">ADVENTURES</h2>
+
+            <section class="adventures-container">
+            <h2 class="in-title">ADVENTURES</h2>
 			<?php 
 				$args = array( 'post_type' => 'adventure', 'order' => 'ASC', 'posts_per_page' => 4);
    				$product_posts = get_posts( $args ); 
 			?>
-			<div class="adventure-container">
+         <ul>
+			<div class="adventure-posts">
                 <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
    				    <?php ?>
 					   <ul class="adventure-box">
 					   		<div class="adventure-img">
 							<?php the_post_thumbnail('medium'); ?></div>
 							<div class="adventure-data">
+                     </div>
 							<div class="adventure-title">
                                <h3><?php the_title(); ?></h3>
-                        </div>
+                     </div>
 							<div class="read-entry-btn">
                             <a href="<?php echo get_post_permalink($post);?>">read entry</a>
-                        </div>
+                     </div>
 						</ul>
                 <?php endforeach; wp_reset_postdata(); ?>
             </div>
 
+
+         </section>
+
          </section>
                 
 
-         <?php
+         <?php ?>
+
+<?php get_footer(); ?>

@@ -17,10 +17,11 @@ get_header(); ?>
 					));
 					if (!empty($terms) && !is_wp_error($terms)) :
 						?>
-					
-					
+					<div class="shop-stuff-fix">
+					<h2 class="page-title-archive">Shop Stuff</h2>
 					<div class="first-page-product-choose">
 					
+					</div>
 						<?php foreach ($terms as $term) : ?>
 							<div class="product-type-block-wrapper">
 								<p><a href="<?php echo get_term_link($term); ?>" class="buttons"><?php echo $term->name; ?></a></p>
@@ -29,7 +30,7 @@ get_header(); ?>
 					</div>
 				<?php endif; ?>
 
-	<div id="primary" class="content-area ">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		
 		<?php if ( have_posts() ) : ?>
@@ -73,7 +74,3 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
-
-<div class="shop-stuff-flex">
-<h2>Shop Stuff<h2>
-</div>

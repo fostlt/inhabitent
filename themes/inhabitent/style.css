@@ -611,9 +611,11 @@ a {
 
 /* TODO FIX FONT*/
 .product-type-block-wrapper {
-  width: 23%;
-  border: 1px solid #e1e1e1;
-  font-family: 'Merriweather', serif; }
+  font-size: 1.6rem;
+  font-family: 'Merriweather', serif;
+  -webkit-transform: translate(570px, 0px);
+          transform: translate(570px, 0px);
+  width: 6%; }
 
 .product-type-block-wrapper img {
   height: 70px;
@@ -833,6 +835,14 @@ a {
   display: -ms-flexbox;
   display: flex; }
 
+.shop-stuff-fix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%; }
+
 .find-us-nav {
   width: initial;
   position: relative;
@@ -915,7 +925,11 @@ a {
 .page-title-archive {
   text-align: center;
   font-size: 2.4rem;
-  margin-top: 4rem; }
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-bottom: 0; }
 
 .journal-link {
   color: black; }

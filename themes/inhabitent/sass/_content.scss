@@ -118,10 +118,11 @@ margin-right:14rem;
 
 /* TODO FIX FONT*/
 .product-type-block-wrapper {
-    width: 23%;
-    border: 1px solid #e1e1e1;
+   
+    font-size:1.6rem;
     font-family: 'Merriweather', serif;
-    
+    transform: translate(570px, 0px);
+    width: 6%;
 }
 
 .product-type-block-wrapper img {
@@ -369,6 +370,17 @@ h2{
 }
 
 
+
+
+.shop-stuff-fix{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+
+
 .find-us-nav {
     //border-bottom: 1px solid #e1e1e1;       
     width: initial;
@@ -475,7 +487,11 @@ h2{
 .page-title-archive {
     text-align: center;
     font-size: 2.4rem;
-    margin-top: 4rem; 
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 0;
  
 }
 

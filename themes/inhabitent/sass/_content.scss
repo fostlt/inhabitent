@@ -233,15 +233,55 @@ h2{
 
 /* ADVENTURES*/
 
-.adventure-container {
-    height: 500px;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
-    height: 100%;
-    width: 1120px;
-    margin-left: auto;
-    margin-right: auto;
+.adventure-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "adventure-post-a adventure-post-a adventure-post-b adventure-post-b" "adventure-post-a adventure-post-a adventure-post-c adventure-post-d";
+    grid-gap: 20px 20px;
+    width: 1044px;
+    margin: 0 auto;
+
+
+}
+
+/* grid pattern*/
+.adventure-post-a { grid-area: adventure-post-a; }
+
+.adventure-post-b { grid-area: adventure-post-b; }
+
+.adventure-post-c { grid-area: adventure-post-c; }
+
+.adventure-post-d { grid-area: adventure-post-d; }
+/*grid pattern end */
+
+
+.adventure-post-a{
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url(/inhabitent/wp-content/themes/inhabitent/images/adventure-photos/canoe-girl.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
+    
+}
+
+.adventure-post-b{
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url(/inhabitent/wp-content/themes/inhabitent/images/adventure-photos/beach-bonfire.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
+    height: 300px;
+}
+.adventure-post-c{
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url(/inhabitent/wp-content/themes/inhabitent/images/adventure-photos/mountain-hikers.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
+}
+.adventure-post-d{
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url(/inhabitent/wp-content/themes/inhabitent/images/adventure-photos/night-sky.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
 }
 
 .adventure-posts-all {
@@ -251,6 +291,63 @@ h2{
 }
 
 
+/* not very dry, but I'm beyond tired */
+.adventure-post-a-h3{
+color: #FFF;
+font-family: 'Merriweather', serif;
+font-size: 3.5rem;
+text-align: left;
+margin-left: 20px;
+font-weight: 300;
+}
+
+.adventure-post-a-btn{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 1rem 2.4rem;
+    text-transform: uppercase;
+    display: flex;
+    margin-left: 15px;
+}
+
+.adventure-post-b-h3{
+    color: #fff;
+    font-family: 'Merriweather',serif;
+    font-size: 2.5rem;
+    text-align: left;
+    margin-left: 20px;
+    font-weight: 300;
+    }
+
+    .adventure-post-c-h3{
+        color: #fff;
+        font-family: 'Merriweather',serif;
+        font-size: 2rem;
+        text-align: left;
+        margin-left: 20px;
+        font-weight: 300;
+        }
+
+        .adventure-post-d-h3{
+            color: #fff;
+            font-family: 'Merriweather',serif;
+            font-size: 2rem;
+            text-align: left;
+            margin-left: 20px;
+            font-weight: 300;
+            margin-bottom: 93px;
+
+            }
+
+
+
+
+
+
+
+
+/* may need ahead*/
 .adventure-container img {
         object-fit: cover;
         min-height: 100%;

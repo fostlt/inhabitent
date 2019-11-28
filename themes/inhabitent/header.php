@@ -52,7 +52,7 @@
 		if (has_post_thumbnail()) { ?>
 
 			<?php if (is_page('front-page')) { ?>
-				<div class="hero-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url(<?= get_the_post_thumbnail_url(); ?>);">
+				<div class="hero-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6)), url(<?= get_the_post_thumbnail_url(); ?>);">
 					<img class="inhabitent-text-logo" src="<?php echo get_template_directory_uri() ?>/images/logos/inhabitent-logo-full.svg" alt="<?php echo $term->name; ?>" />
 				</div>
 			<?php } elseif (is_page('about')) { ?>

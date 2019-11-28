@@ -11,7 +11,7 @@ get_header(); ?>
                ) );
                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
             ?>
-               <div class="product-type-containers">
+               <div class="product-type-blocks">
                   <?php foreach ( $terms as $term ) : ?>
                      <div class="product-type-block-containers">
                         <img src="<?php echo get_template_directory_uri() . '/images/product-type-icons/' . $term->slug; ?>.svg" alt="<?php echo $term->name; ?>" />
@@ -46,37 +46,53 @@ get_header(); ?>
             </div>
             
 
-            <section class="adventures-container">
-            <h2 class="in-title">ADVENTURES</h2>
-			<?php 
-				$args = array( 'post_type' => 'adventure', 'order' => 'ASC', 'posts_per_page' => 4);
-   				$product_posts = get_posts( $args ); 
-			?>
-         <ul>
-			<div class="adventure-posts">
-                <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-   				    <?php ?>
-					   <ul class="adventure-box">
-					   		<div class="adventure-img">
-							<?php the_post_thumbnail('medium'); ?></div>
-							<div class="adventure-data">
-                     </div>
-							<div class="adventure-title">
-                               <h3><?php the_title(); ?></h3>
-                     </div>
-							<div class="read-entry-btn">
-                            <a href="<?php echo get_post_permalink($post);?>">read entry</a>
-                     </div>
-						</ul>
-                <?php endforeach; wp_reset_postdata(); ?>
-            </div>
+<section class="adventure-container-post">
+<h2>Latest Adventures<h2>
 
+<div class="adventure-grid">
 
-         </section>
+<div class="adventure-post-a">
+<h3 class="adventure-post-a-h3">
+Getting Back to Nature in a Canoe
+<h3>
+<button class="adventure-post-a-btn">
+   read more
+</button>
+</div>
 
-         </section>
+<div class="adventure-post-b">
+<h3 class="adventure-post-b-h3">
+A Night with Friends at the Beach
+<h3>
+<button class="adventure-post-a-btn">
+   read more
+</button>
+</div>
+
+<div class="adventure-post-c">
+<h3 class="adventure-post-c-h3">
+Taking in the View at Big Mountain
+<h3>
+<button class="adventure-post-a-btn">
+   read more
+</button>
+</div>
+
+<div class="adventure-post-d">
+<h3 class="adventure-post-d-h3">
+Star-Gazing at the Night Sky
+<h3>
+<button class="adventure-post-a-btn">
+   read more
+</button>
+</div>
+
+</div>
+</section>
+
+</section>
                 
 
-         <?php ?>
+<?php ?>
 
 <?php get_footer(); ?>

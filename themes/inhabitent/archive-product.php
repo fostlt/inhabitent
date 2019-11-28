@@ -5,6 +5,10 @@
  * @package RED_Starter_Theme
  */
 
+
+ /* TODO - This was so frustrating to do on my own.
+ 
+ */
 get_header(); ?>
 	<?php
 					$terms = get_terms(array(
@@ -13,8 +17,10 @@ get_header(); ?>
 					));
 					if (!empty($terms) && !is_wp_error($terms)) :
 						?>
-					<h2 class="page-title-archive">Shop Stuff</h2>
+					
+					
 					<div class="first-page-product-choose">
+					
 						<?php foreach ($terms as $term) : ?>
 							<div class="product-type-block-wrapper">
 								<p><a href="<?php echo get_term_link($term); ?>" class="buttons"><?php echo $term->name; ?></a></p>
@@ -23,7 +29,7 @@ get_header(); ?>
 					</div>
 				<?php endif; ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area ">
 		<main id="main" class="site-main" role="main">
 		
 		<?php if ( have_posts() ) : ?>
@@ -50,7 +56,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					get_template_part( 'template-parts/content' );
+					get_template_part( 'template-parts/content', 'product' );
 				?>
 
 			<?php endwhile; ?>
@@ -67,3 +73,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
+
+<div class="shop-stuff-flex">
+<h2>Shop Stuff<h2>
+</div>

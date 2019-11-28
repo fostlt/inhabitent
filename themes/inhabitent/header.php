@@ -1,8 +1,3 @@
-<?php get_header ?>
-<div class="container">
-<h1><?php the_title();?></h1>
-
-
 <?php
 /**
  * The header for our theme.
@@ -23,10 +18,10 @@
 	<?php wp_head(); ?>
 	</head>
 
-	
+	<body <?php body_class(); ?>>
 
 <section class="container-hero">
-	<body <?php body_class(); ?>>
+	
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
@@ -38,14 +33,14 @@
 				
 				</div><!-- .site-branding -->
 
-				<div class="container-logo-nav find-us-nav">
+				<div class="container-logo-nav shop-stuff find-us-nav ">
 						<div class="custom_logo"> 
 							<?php if ( function_exists( 'the_custom_logo' ) ) {
  							the_custom_logo();
 							} ?>
 					</div>
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
+				<nav id="site-navigation" class="main-navigation other-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
@@ -69,17 +64,18 @@
 		} ?>	
 
 
+
+
+
+</section>
+
+			
 			<div id="content" class="site-content">
-
-
-
+		
 
 
 
 	
-
-
-</section>
 	
 	
 

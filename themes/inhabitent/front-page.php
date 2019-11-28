@@ -2,6 +2,7 @@
 get_header(); ?>
 
 <section class="product-info container">
+            
             <h2>SHOP STUFF</h2>
             <?php
                $terms = get_terms( array(

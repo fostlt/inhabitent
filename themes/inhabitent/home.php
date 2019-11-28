@@ -20,8 +20,7 @@ get_header(); ?>
                         
                     <?php endif; ?>
 
-                    <?php the_title( '<h1> class="entry-title">', '</h1>' ); ?>
-
+                    <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
                     <div class="entry-meta">
                         <?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
                     </div><!-- .entry-meta -->
@@ -30,7 +29,7 @@ get_header(); ?>
                 <div class="entry-content">
                     <?php the_excerpt(); ?>
                    
-                    <a class="journal-link" href="<?php echo get_the_permalink(); ?>">Read More</a>
+                    <button class="journal-button"> <a class="journal-link" href="<?php echo get_the_permalink(); ?>">Read More</a> </button>
                 </div><!-- .entry-content -->
 
                 <footer class="entry-footer">

@@ -523,7 +523,8 @@ font-weight: 300;
 
 .entry-content{
         margin-top: 3rem;
-        margin-left: 12rem;
+        margin-left: 14rem;
+        margin-right: 6rem;
     h2{
         text-align: start;
     }
@@ -668,4 +669,86 @@ font-weight: 300;
     font-weight: bold;  
 }
 
+/* single product*/
 
+.product-single-title{
+    width: 30rem;
+}
+
+.product-content-single {
+    display: flex;
+    width: 500px;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    margin-left: 10rem;    
+}
+
+.product-single-header{
+    margin-left: 4rem;
+
+}
+
+/* journal */
+
+.journal-content-story{
+    position: relative;
+    margin-top: 7rem;
+    margin-left: 10rem;
+    margin-right: 5rem;
+    img{
+        width: 800px;
+    }
+}
+
+.journal-single-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #248a83;
+    width: 22rem;
+    padding: 1rem;
+    color: #fff;
+}
+
+.journal-button{
+    padding: .75rem 1.5rem;
+    width: 12rem;
+    background: transparent;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #000;
+}
+
+.Journal-pages{
+width:100px;
+}
+
+.taxonomy-description{
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.container-products-box{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Merriweather', serif;
+    margin-top: 5rem;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.nav-bar{
+padding: 0px;
+}
+
+.archive-title-page{
+    font-size: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-logo-nav{
+    color: #fff;
+}

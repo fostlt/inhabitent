@@ -18,7 +18,7 @@ get_header(); ?>
 					if (!empty($terms) && !is_wp_error($terms)) :
 						?>
 					<div class="shop-stuff-fix">
-					<h2 class="page-title-archive">Shop Stuff</h2>
+					<h2 class="page-title-archive">SHOP STUFF</h2>
 					<div class="first-page-product-choose">
 					
 					</div>
